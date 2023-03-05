@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JQUERY 008</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .c {
+            width: fit-content;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid red;
+            padding: 10px;
+        }
+        div ul{
+            margin:0px;
+            padding:0px;
+            font-size: large;
+        }
+
+        .c div {
+            float: left;
+        }
+
+        .f2 {
+            height: 50px;
+            width: 100px;
+
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".filters").click(function () {
+                $(".c").toggle();
+            });
+            $(".f2").click(function () {
+                $(":checkbox").each(function () {
+                    if ($(this).is(":checked")) {
+                        $("." + $(this).val()).css("display", "block")
+                    }
+                    else
+                        $("." + $(this).val()).css("display", "none");
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button class="filters">Filter</button><br><br>
+    <div class="c">
+        <div>
+            <div>
+                <input type="checkbox" id="c-1" name="c-1" value="c-1">
+                <label for="c-1">Engineering jobs</label><br><br>
+                <input type="checkbox" id="c-2" name="c-2" value="c-2">
+                <label for="c-2">Aerospace jobs</label><br><br>
+                <input type="checkbox" id="c-3" name="c-3" value="c-3">
+                <label for="c-3">IT jobs</label><br><br>
+                <input type="checkbox" id="c-4" name="c-4" value="c-4">
+                <label for="c-4">Sales jobs</label><br><br>
+                <input type="checkbox" id="c-5" name="c-5" value="c-5">
+                <label for="c-5">Marketing jobs</label><br><br>
+                <input type="checkbox" id="c-6" name="c-6" value="c-6">
+                <label for="c-6">Data science jobs</label><br><br>
+                <input type="checkbox" id="c-7" name="c-7" value="c-7">
+                <label for="c-7">AI/ML jobs</label><br><br>
+                <input type="checkbox" id="c-8" name="c-8" value="c-8">
+                <label for="c-8">Remote jobs</label><br><br>
+                <input type="checkbox" id="c-9" name="c-9" value="c-9">
+                <label for="c-9">Finance & Accounting</label><br><br>
+                <input type="checkbox" id="c-10" name="c-10" value="c-10">
+                <label for="c-10">Teaching & Training</label><br><br>
+            </div>
+            <div>
+                <input type="checkbox" id="c-11" name="c-11" value="c-11">
+                <label for="c-11">Healthcare & Life Sciences</label><br><br>
+                <input type="checkbox" id="c-12" name="c-12" value="c-12">
+                <label for="c-12">Consulting</label><br><br>
+                <input type="checkbox" id="c-13" name="c-13" value="c-13">
+                <label for="c-13">Research & Development</label><br><br>
+                <input type="checkbox" id="c-14" name="c-14" value="c-14">
+                <label for="c-14">Security Services</label><br><br>
+                <input type="checkbox" id="c-15" name="c-15" value="c-15">
+                <label for="c-15">Energy & Mining</label><br><br>
+                <input type="checkbox" id="c-16" name="c-16" value="c-16">
+                <label for="c-16">Legal & Regulatory</label><br><br>
+                <input type="checkbox" id="c-17" name="c-17" value="c-17">
+                <label for="c-17">Media Production & Entertainment</label><br><br>
+                <input type="checkbox" id="c-18" name="c-18" value="c-18">
+                <label for="c-18">Sports & Fitness </label><br><br>
+                <input type="checkbox" id="c-19" name="c-19" value="c-19">
+                <label for="c-19">UX, Design & Architecture</label><br><br>
+                <input type="checkbox" id="c-20" name="c-20" value="c-20">
+                <label for="c-20">Production and Manufacturing</label><br><br>
+            </div>
+        </div>
+        <button class="f2">Apply</button>
+    </div><br>
+    <div class="result">
+        <div class="c-1">
+            <ul>
+                <li>Executive Engineer</li>
+                <li>Chemical Engineer</li>
+                <li>Computer Engineer</li>
+                <li>Mechanical Engineer</li>
+                <li>Petrolium Engineer</li>
+                <li>Electrical Engineer</li>
+                <li>Civil Engineer</li>
+            </ul>
+        </div>
+        <div class="c-2">
+            <ul>
+                <li>Aeronautical Engineer</li>
+                <li>Aircraft Maintainance Engineer</li>
+                <li>Aircraft/Spacecraft Designer</li>
+                <li>Data Processing Manager</li>
+                <li>Military Aerospace Engineer</li>
+                <li>Aerospace Technician</li>
+            </ul>
+        </div>
+        <div class="c-3">
+            <ul>
+                <li>Chief information officer</li>
+                <li>Chief information security officer</li>
+                <li>Chief technology officer</li>
+                <li>IT Director</li>
+                <li>IT Manager</li>
+            </ul>
+        </div>
+        <div class="c-4">
+            <ul>
+                <li>Collection agent</li>
+                <li>Sales consultant</li>
+                <li>Account executive</li>
+                <li>Account manager</li>
+                <li>Sales manager</li>
+            </ul>
+        </div>
+        <div class="c-5">
+            <ul>
+                <li>Chief marketing officer</li>
+                <li>Director of marketing</li>
+                <li>Marketing analyst</li>
+                <li>Marketing coordinator</li>
+                <li>Marketing consultant</li>
+            </ul>
+        </div>
+        <div class="c-6">
+            <ul>
+                <li>Data Scientist</li>
+                <li>Data Analyst</li>
+                <li>Data Engineer</li>
+                <li>Data Architect</li>
+                <li>Data Storyteller</li>
+            </ul>
+        </div>
+        <div class="c-7">
+            <ul>
+                <li>Machine Learning Scientist</li>
+                <li>Machine Learning Engineer</li>
+                <li>Business Intelligence Developer</li>
+                <li>AI Data Analyst</li>
+                <li>AI engineer</li>
+            </ul>
+        </div>
+        <div class="c-8">
+            <ul>
+                <li>Web Designer</li>
+                <li>Writer</li>
+                <li>Editor</li>
+                <li>UI/UX Design</li>
+            </ul>
+        </div>
+        <div class="c-9">
+            <ul>
+                <li>Chief financial officer</li>
+                <li>Accountant</li>
+                <li>Accounting consultant</li>
+                <li>Certified public accountant</li>
+                <li>Business analyst</li>
+            </ul>
+        </div>
+        <div class="c-10">
+            <ul>
+                <li>Education Administrator.</li>
+                <li>Career Counsellor</li>
+                <li>Academic Content Developer</li>
+                <li>Librarian</li>
+                <li>Trainer</li>
+            </ul>
+        </div>
+        <div class="c-11">
+            <ul>
+                <li>Senior Research Analyst</li>
+                <li>Doctor</li>
+                <li>Pharmacist</li>
+                <li>Chief Medical Officer</li>
+                <li>Meical Superintendent</li>
+            </ul>
+        </div>
+        <div class="c-12">
+            <ul>
+                <li>Technology Consulting</li>
+                <li>Management Consulting</li>
+                <li>Senior Solutions Consultant</li>
+                <li>Sales Consultant</li>
+            </ul>
+        </div>
+        <div class="c-13">
+            <ul>
+                <li>Scientist</li>
+                <li>Archeologist</li>
+                <li>Navigator</li>
+            </ul>
+        </div>
+        <div class="c-14">
+            <ul>
+                <li>Security Guard</li>
+                <li>Military</li>
+                <li>Defence</li>
+                <li>Navy</li>
+                <li>Police</li>
+            </ul>
+        </div>
+        <div class="c-15">
+            <ul>
+                <li>Mining Engineer</li>
+                <li>Second class mining manager</li>
+                <li>Process Mining Data Engineer</li>
+                <li>Mining operator</li>
+                <li>Mining geologist</li>
+            </ul>
+        </div>
+        <div class="c-16">
+            <ul>
+                <li>Legal advisior</li>
+                <li>Head of Legal</li>
+                <li>Lawyer</li>
+                <li>Judge</li>
+                <li>Legal and compliance officer</li>
+            </ul>
+        </div>
+        <div class="c-17">
+            <ul>
+                <li>Actor</li>
+                <li>Director</li>
+                <li>Producer</li>
+                <li>DOP</li>
+                <li>Fashion designer</li>
+            </ul>
+        </div>
+        <div class="c-18">
+            <ul>
+                <li>Coach</li>
+                <li>Umpire</li>
+                <li>Water boy</li>
+                <li>Gym Trainer</li>
+            </ul>
+        </div>
+        <div class="c-19">
+            <ul>
+                <li>Web designer</li>
+                <li>Architect</li>
+                <li>Constructor</li>
+                <li>Interior Designer</li>
+            </ul>
+        </div>
+        <div class="c-20">
+            <ul>
+                <li>Transport Manager</li>
+                <li>Production Superviser</li>
+                <li>Production Manager</li>
+                <li>Manufacturing Engineer</li>
+                <li>Factory Manager</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

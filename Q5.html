@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Q5</title>
+<script src="./jq.js"></script>
+<script>
+$(document).ready(function(){
+ $("#flip").click(function(){
+ $("#panel").slideDown("fast");
+ });
+ 
+  $(".A").click(function(){
+ $("div").animate({
+ left: '500px',
+
+
+ });
+ });
+ 
+  $(".B").click(function(){
+ $("#1").fadeIn(1000);
+ $("#2").fadeOut(3000);
+ $("#3").fadeToggle(3000);
+  $("#4").fadeTo(3000,0.6);
+
+ });
+ 
+  $("#a").click(function(){ 
+ $("p").hide(); 
+ });
+ $("#b").click(function(){
+ $("p").show(); 
+ });
+ 
+  $(".C").mouseenter(function(){
+ alert("Your cursor touched the HTML elements.");
+ });
+ 
+ $("h1,h2,h3").dblclick(function(){
+ $(this).hide();
+ });
+ 
+  $("#par").mouseleave(function(){
+ alert("You left the paragraph element!");
+ });
+ 
+  $("#b1").click(function(){
+ $("#w3s").attr("href", "https://www.reddit.com");
+ });
+ 
+ $("#b2").click(function(){
+ alert("HTML: " + $("#par").html());
+ });
+ 
+});
+</script>
+
+
+<style> 
+	 #panel,	#flip	{
+ padding: 10px;
+ text-align: left;
+ background-color: dodgerblue;
+ border: solid 5px purple;
+ }
+ #panel {
+ padding: 60px;
+ display: none;
+ }
+ </style>
+</head>
+<body>
+<div	id="flip">When	this	area	is	clicked,	a	panel	emerges.</div>
+ <div id="panel">The panel greets the user with Merry Christmas!</div>
+ <hr>
+ 
+ <button class="A">Begin the Box Animation</button>
+<div style="background:red;height:50px;width:50px;position:fixed;"></div>
+<br><br><br><br><hr>
+
+<p>Applying fadeIn effect on each box with different timing.</p>
+<button class="B">Hit the button to get the fading effect.</button><br><br>
+<div id="1" style="width:40px;height:60px;display:none;background-color:brown;">
+</div><br>
+<div id="2" style="width:40px;height:60px;background-color:black;">
+</div><br>
+<div id="3" style="width:40px;height:60px;display:none;background-color:orange;">
+</div><br>
+<div id="4" style="width:40px;height:60px;display:none;background-color:violet;">
+</div><br>
+<hr>
+
+<p>If the Disappear button is clicked, then the paragraph would disappear.</p>
+<p>If the Appear button is clicked, then the paragraph would appear again.</p>
+<button id="a">Disappear</button>
+<button id="b">Appear</button>
+<hr>
+
+<h1>First Heading</h1>
+<h2>Second Heading</h2>
+<h3>Third Heading</h3>
+<p>This time, a single click is not enough. You have to double-click a heading to
+hide it.</p>
+<hr>
+
+
+<h1 class="C">Example of Mouseenter</h1>
+<p class="C">Take the cursor to the HTML element.</p>
+<hr>
+
+<h1 id="par">Example of MouseLeave</h1>
+<p id="par">Take the cursor to the HTML element.</p>
+<hr>
+
+<p><a href="https://www.google.com" target="_blank" id="w3s">Google.com</a></p>
+<button id="b1">Click to change the href value</button>
+<p>After clicking the link, place your cursor on the hyperlink and check the link 
+address or click it to go to other website.</p>
+<hr>
+
+<p id="par">This is line is part of a paragraph <b>and contains bold text.</b> </p>
+<button id="b2">Display HTML code</button>
+</body>
+</html>

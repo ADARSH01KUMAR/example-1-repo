@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script src="./jq.js"></script>
+    <script>
+        function myFunction(){
+            var txt;
+            if(confirm("Hello developer!")){
+                txt="Got it";
+            }else{
+                txt="Didn't get it";
+            }
+            document.getElementById("Q4").innerHTML=txt;
+        }
+    </script>
+</head>
+<body>
+    <h1>Popup Box</h1>
+    <button onclick="myFunction()">Click</button>
+    <p id="Q4"></p>
+</body>
+</html>

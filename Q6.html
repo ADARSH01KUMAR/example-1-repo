@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Q6</title>
+<script src="./jq.js">
+</script>
+    <script>
+        let lineNo = 1;
+        $(document).ready(function () {
+            $(".add-row").click(function () {
+                markup = "<tr><td>"+"</td><td>"+"</td><td>"+"</td></tr>";
+                tableBody = $("table tbody");
+                tableBody.append(markup);
+                });
+                  $("#b1").click(function(){
+                     $("h2").addClass("green");
+                        $("div").addClass("size");
+                     });
+                 }); 
+    </script>
+</script>
+      
+    <style>
+        table {
+            margin: 25px 0;
+            width: 200px;
+        }
+        table th, table td {
+            padding: 10px;
+            text-align: center;
+        }
+        table, th, td {
+            border: 1px solid;
+        }
+        .green {
+ color: rgb(255, 0, 0);
+ }
+    </style>
+</head>
+<body>
+ <h1 style="color: green">
+        Adding Rows to a Table:
+    </h1>
+    <p>
+        Click on the button below to
+        add a row to the table
+    </p>  
+    <button class="add-row">
+        Add row
+    </button>     
+    <table>
+        <thead>
+            <tr>
+                <th>Sno.</th>
+                  <th>Name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>Adarsh Kumar</td>
+                <td>08</td>
+            </tr>
+             <tr>
+                <td>02</td>
+                <td>Rahul Kumar</td>
+                <td>96</td>
+            </tr>
+              <tr>
+                <td>03</td>
+                <td>Rajesh Kumar</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>Durjesh Kumar</td>
+                <td>99</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr><br>
+    
+    <h2>INDIA</h2>
+     <button id ="b1">CLICK</button>
+      
+   </body>
+</html>
